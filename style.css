@@ -486,7 +486,7 @@ section {
 }
 
 .pricing-features li::before {
-    content: '✓';
+    content: 'âœ“';
     position: absolute;
     left: 0;
     color: var(--primary-color);
