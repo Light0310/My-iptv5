@@ -88,6 +88,7 @@
         
         <div class="language-selector" id="languageSelector">
             <p>Choose your language / Choisissez votre langue / اختر لغتك</p>
+            <a href="fr.html" class="lang-btn">🇬🇧 English</a>
             <a href="fr.html" class="lang-btn">🇫🇷 Français</a>
             <a href="es.html" class="lang-btn">🇪🇸 Español</a>
             <a href="ar.html" class="lang-btn">🇸🇦 العربية</a>
@@ -103,6 +104,7 @@
             
             // Langues supportées
             const supportedLanguages = {
+                'en' :'en.html',
                 'fr': 'fr.html',
                 'es': 'es.html',
                 'ar': 'ar.html'
@@ -115,6 +117,7 @@
             
             // Vérifier les langues régionales spécifiques
             const regionalLanguages = {
+                'en-en': 'en.html',
                 'fr-fr': 'fr.html',
                 'fr-ca': 'fr.html',
                 'fr-be': 'fr.html',
@@ -134,8 +137,8 @@
                 return regionalLanguages[browserLang.toLowerCase()];
             }
             
-            // Par défaut, rediriger vers français
-            return 'fr.html';
+            // Par défaut, rediriger vers anglais
+            return 'en.html';
         }
         
         // Fonction de redirection
