@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-IPTV - Redirecting...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #00D4FF 0%, #8B5CF6 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .loading-container {
+            text-align: center;
+            animation: fadeIn 0.5s ease-in;
+        }
+        .logo {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .loading-text {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        .language-selector {
+            margin-top: 2rem;
+            display: none;
+        }
+        .language-selector.show {
+            display: block;
+            animation: slideUp 0.3s ease-out;
+        }
+        .lang-btn {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="logo">My-IPTV</div>
+        <div class="loading-text" id="loadingText">Detecting your language...</div>
+        <div class="spinner" id="spinner"></div>
+        
+        <div class="language-selector" id="languageSelector">
+            <p>Choose your language / Choisissez votre langue / اختر لغتك</p>
+            <a href="fr.html" class="lang-btn">🇫🇷 Français</a>
+            <a href="es.html" class="lang-btn">🇪🇸 Español</a>
+            <a href="ar.html" class="lang-btn">🇸🇦 العربية</a>
+        </div>
+    </div>
+
+    <script>
+        // Fonction de détection de langue
+        function detectLanguage() {
+            // Obtenir la langue du navigateur
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.toLowerCase().split('-')[0];
+            
+            // Langues supportées
+            const supportedLanguages = {
+                'fr': 'fr.html',
+                'es': 'es.html',
+                'ar': 'ar.html'
+            };
+            
+            // Vérifier si la langue est supportée
+            if (supportedLanguages[langCode]) {
+                return supportedLanguages[langCode];
+            }
+            
+            // Vérifier les langues régionales spécifiques
+            const regionalLanguages = {
+                'fr-fr': 'fr.html',
+                'fr-ca': 'fr.html',
+                'fr-be': 'fr.html',
+                'fr-ch': 'fr.html',
+                'es-es': 'es.html',
+                'es-mx': 'es.html',
+                'es-ar': 'es.html',
+                'es-co': 'es.html',
+                'ar-sa': 'ar.html',
+                'ar-eg': 'ar.html',
+                'ar-ma': 'ar.html',
+                'ar-dz': 'ar.html',
+                'ar-tn': 'ar.html'
+            };
+            
+            if (regionalLanguages[browserLang.toLowerCase()]) {
+                return regionalLanguages[browserLang.toLowerCase()];
+            }
+            
+            // Par défaut, rediriger vers français
+            return 'fr.html';
+        }
+        
+        // Fonction de redirection
+        function redirectToLanguage() {
+            const targetPage = detectLanguage();
+            
+            // Simuler un délai de chargement pour l'effet visuel
+            setTimeout(() => {
+                // Vérifier si le fichier existe (simulation)
+                window.location.href = targetPage;
+            }, 1500);
+        }
+        
+        // Fonction pour afficher le sélecteur manuel
+        function showLanguageSelector() {
+            document.getElementById('loadingText').textContent = 'Please select your language';
+            document.getElementById('spinner').style.display = 'none';
+            document.getElementById('languageSelector').classList.add('show');
+        }
+        
+        // Démarrer la détection au chargement de la page
+        window.addEventListener('load', () => {
+            // Essayer la redirection automatique
+            try {
+                redirectToLanguage();
+            } catch (error) {
+                // En cas d'erreur, afficher le sélecteur manuel
+                setTimeout(showLanguageSelector, 1000);
+            }
+            
+            // Afficher le sélecteur manuel après 3 secondes si pas de redirection
+            setTimeout(() => {
+                if (window.location.href.includes('index.html') || window.location.href.endsWith('/')) {
+                    showLanguageSelector();
+                }
+            }, 3000);
+        });
+        
+        // Gestion des erreurs de navigation
+        window.addEventListener('error', () => {
+            showLanguageSelector();
+        });
+    </script>
+</body>
+</html>
