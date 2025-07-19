@@ -306,6 +306,7 @@ function addLanguageSwitcher() {
                 cursor: pointer;
             ">
                 <option value="">🌐 Language</option>
+                <option value="en">🇬🇧 Enlish</option>
                 <option value="fr">🇫🇷 Français</option>
                 <option value="es">🇪🇸 Español</option>
                 <option value="ar">🇸🇦 العربية</option>
