@@ -252,6 +252,50 @@
             </div>
         </div>
     </section>
+    <section id="activation" style="background: radial-gradient(circle, #0a0a0a 0%, #000 100%); padding: 50px 20px; font-family: 'Segoe UI', sans-serif; color: #fff;">
+  <div style="max-width: 800px; margin: auto; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 20px; padding: 40px; box-shadow: 0 0 25px rgba(0,255,200,0.2);">
+    <h2 style="color: #00ffe1; text-align: center; font-size: 30px; margin-bottom: 30px;">
+      🚀 Activation Express IPTV
+    </h2>
+    <p style="text-align: center; font-size: 18px;">Entrez vos infos pour une installation rapide par notre équipe.</p>
+
+    <form onsubmit="sendToWhatsApp(); return false;" style="margin-top: 30px;">
+      <label for="app" style="color:#ccc;">📱 Application utilisée :</label><br>
+      <select id="app" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 10px; border: none; background: #111; color: #00ffe1;">
+        <option value="">-- Choisissez --</option>
+        <option value="IBO Player">IBO Player</option>
+        <option value="B0B Player">B0B Player</option>
+      </select>
+
+      <label for="mac" style="color:#ccc;">🆔 Adresse MAC :</label><br>
+      <input type="text" id="mac" placeholder="Ex: A1:B2:C3:D4:E5:F6" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 10px; border: none; background: #111; color: #fff;">
+
+      <label for="key" style="color:#ccc;">🔑 Device Key (clé de l’appareil) :</label><br>
+      <input type="text" id="key" placeholder="Ex: ABC1234567" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 10px; border: none; background: #111; color: #fff;">
+
+      <button type="submit" style="width: 100%; background: #00ffe1; color: #000; padding: 15px; border: none; border-radius: 15px; font-size: 18px; font-weight: bold; box-shadow: 0 0 10px #00ffe1;">
+        🚀 Envoyer et activer par WhatsApp
+      </button>
+    </form>
+
+    <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #999;">
+      Nous vous répondrons sous 5 minutes.
+    </p>
+  </div>
+</section>
+
+<script>
+function sendToWhatsApp() {
+  const app = document.getElementById("app").value;
+  const mac = document.getElementById("mac").value;
+  const key = document.getElementById("key").value;
+
+  const message = `🔥 Nouvelle demande IPTV :%0A📱 Application: ${app}%0A🆔 MAC: ${mac}%0A🔑 Device Key: ${key}`;
+  const phone = "212694843943";
+  const url = `https://wa.me/${phone}?text=${message}`;
+  window.open(url, '_blank');
+}
+</script>
 
     <!-- Contact Section -->
     <section id="contact">
