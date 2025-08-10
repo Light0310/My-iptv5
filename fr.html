@@ -462,6 +462,186 @@ track.addEventListener('mouseleave', startAutoScroll);
 startAutoScroll();
 </script>
 <!-- Fin -->
+
+        <--Avis-->
+            <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avis Clients</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #f8f9fa;
+            --text-color: #495057;
+            --heading-color: #343a40;
+            --border-color: #e9ecef;
+            --star-color: #FFD700;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2.main-heading {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--heading-color);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2.main-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .avis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .avis-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .avis-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .avis-card .etoiles {
+            color: var(--star-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .avis-card h4 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin: 0 0 1rem 0;
+        }
+
+        .avis-card p {
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .avis-card .signature {
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .avis-card .nom {
+            font-weight: bold;
+            color: var(--heading-color);
+        }
+        
+        @media (max-width: 768px) {
+            h2.main-heading {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="main-heading">Nos clients, nos meilleurs ambassadeurs !</h2>
+
+        <div class="avis-grid">
+
+            <div class="avis-card">
+                <div class="etoiles">★★★★★</div>
+                <h4>“La télé d'aujourd'hui, enfin !”</h4>
+                <p>“Je cherchais un service moderne et simple en France. Celui-ci a dépassé toutes mes attentes. La navigation est intuitive et j'ai accès à tous mes contenus préférés en un clic. C'est l'abonnement qu'il me fallait pour toute la famille.”</p>
+                <div class="signature">
+                    <span class="nom">Marc</span>
+                    <span class="pays">France 🇫🇷</span>
+                </div>
+            </div>
+
+            <div class="avis-card">
+                <div class="etoiles">★★★★★</div>
+                <h4>“Une offre qui nous sort de l'ordinaire”</h4>
+                <p>“Au Canada, l'offre de chaînes est souvent la même. Grâce à cet abonnement, j'ai l'impression de voyager tous les soirs ! Le choix des chaînes est incroyable et la qualité de l'image est à couper le souffle. C'est une vraie bouffée d'air frais.”</p>
+                <div class="signature">
+                    <span class="nom">Sophie</span>
+                    <span class="pays">Canada 🇨🇦</span>
+                </div>
+            </div>
+
+            <div class="avis-card">
+                <div class="etoiles">★★★★★</div>
+                <h4>“¡Simplemente perfecto!”</h4>
+                <p>“Desde España, buscaba un servicio que fuera fácil de usar y con una gran variedad. Me sorprendió la fluidez de la interfaz y la estabilidad. Poder ver mis series y los deportes en la mejor calidad es un lujo. Lo recomiendo sin dudarlo.”</p>
+                <div class="signature">
+                    <span class="nom">Carlos</span>
+                    <span class="pays">Espagne 🇪🇸</span>
+                </div>
+            </div>
+
+            <div class="avis-card">
+                <div class="etoiles">★★★★★</div>
+                <h4>“Enfin une solution sans tracas”</h4>
+                <p>“En Belgique, j'étais fatigué des problèmes de connexion avec mes anciens abonnements. Ce service est d'une fiabilité exemplaire. Le streaming est instantané et je n'ai plus à me soucier des coupures. Un vrai bonheur pour mes soirées cinéma.”</p>
+                <div class="signature">
+                    <span class="nom">François</span>
+                    <span class="pays">Belgique 🇧🇪</span>
+                </div>
+            </div>
+
+            <div class="avis-card">
+                <div class="etoiles">★★★★★</div>
+                <h4>“Un'esperienza televisiva completa”</h4>
+                <p>“Dall'Italia, ho scoperto questo abbonamento e ne sono rimasto entusiasta. La scelta di canali e di film è vastissima. L'assistenza clienti è veloce e professionale. Non potrei essere più soddisfatto, ha superé toutes mes attentes.”</p>
+                <div class="signature">
+                    <span class="nom">Giulia</span>
+                    <span class="pays">Italie 🇮🇹</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
                     
     <!-- Pricing Section -->
     <section id="pricing">
