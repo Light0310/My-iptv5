@@ -5,34 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-IPTV - Service IPTV Premium | 20 000+ Chaînes HD/4K</title>
 
-    <!-- SEO Meta Tags -->
     <meta name="description" content="My-IPTV - Service IPTV premium avec plus de 20 000 chaînes HD/4K, films, séries, VOD et sport en direct. Test gratuit disponible. Compatible Smart TV, Android, MAG.">
     <meta name="keywords" content="IPTV, chaînes live, VOD, films, séries, sport direct, 4K, HD, Smart TV, Android TV, MAG, test gratuit">
     <meta name="author" content="My-IPTV">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="My-IPTV - Service IPTV Premium">
     <meta property="og:description" content="Plus de 20 000 chaînes HD/4K, films, séries et sport en direct">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://my-iptv.com">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0idXJsKCNncmFkaWVudDApIi8+CjxwYXRoIGQ9Ik04IDEySDI0VjIwSDhWMTJaIiBmaWxsPSJ3aGl0ZSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudDAiIHgxPSIwIiB5MT0iMCIgeDI9IjMyIiB5Mj0iMzIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzAwRDRGRiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4QjVDRjYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Preload critical resources -->
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="script.js" as="script">
 
-    <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -47,10 +41,222 @@
         }
     }
     </script>
+    
+    <style>
+        /* Styles pour la section Avis */
+        .avis-section {
+            padding: 2rem 1rem;
+        }
+        .avis-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .avis-section h2.main-heading {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--heading-color);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .avis-section h2.main-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        .avis-section .avis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .avis-section .avis-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+        }
+        .avis-section .avis-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .avis-section .avis-card .etoiles {
+            color: var(--star-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .avis-section .avis-card h4 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin: 0 0 1rem 0;
+        }
+        .avis-section .avis-card p {
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .avis-section .avis-card .signature {
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .avis-section .avis-card .nom {
+            font-weight: bold;
+            color: var(--heading-color);
+        }
+        @media (max-width: 768px) {
+            .avis-section h2.main-heading {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Styles pour le carrousel des films */
+        :root {
+            --card-width: 180px;
+            --gap: 20px;
+            --height: 260px;
+            --speed: 2.5s;
+            --neon-color: #ff004c;
+        }
+        .neon-carousel {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #0a0a0a;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 25px var(--neon-color), inset 0 0 30px rgba(255,0,76,0.4);
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        .neon-title {
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-shadow: 
+                2px 2px 4px #000,
+                -2px -2px 4px #ff004c,
+                2px -2px 4px #00ffe5,
+                -2px 2px 4px #ffff00,
+                0 0 10px var(--neon-color),
+                0 0 20px var(--neon-color);
+        }
+        .neon-viewport {
+            overflow: hidden;
+        }
+        .neon-title {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 0 0 8px var(--neon-color), 0 0 15px var(--neon-color);
+        }
+        .neon-viewport {
+            overflow: hidden;
+        }
+        .neon-track {
+            display: flex;
+            gap: var(--gap);
+            padding-bottom: 10px;
+            transition: transform 0.5s ease;
+        }
+        .neon-card {
+            flex: 0 0 auto;
+            width: var(--card-width);
+            background: #111;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255,0,76,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .neon-card:hover {
+            transform: scale(1.07);
+            box-shadow: 0 0 20px var(--neon-color), 0 0 35px var(--neon-color);
+        }
+        .neon-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+        .neon-info {
+            padding: 8px;
+            color: #fff;
+            text-align: center;
+        }
+        .neon-title-movie {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .neon-title-movie a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .neon-title-movie a:hover {
+            text-decoration: underline;
+            color: var(--neon-color);
+        }
+        .stars {
+            color: gold;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+        .review {
+            font-size: 12px;
+            color: #ccc;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            border: 2px solid var(--neon-color);
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--neon-color);
+            z-index: 10;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .carousel-btn:hover {
+            background: var(--neon-color);
+            transform: scale(1.1);
+        }
+        .btn-left { left: 5px; }
+        .btn-right { right: 5px; }
+        @media (max-width: 800px) {
+            .neon-carousel { --card-width: 140px; }
+            .neon-card img { height: 190px; }
+        }
+        @media (max-width: 420px) {
+            .neon-carousel { --card-width: 120px; }
+            .neon-card img { height: 170px; }
+        }
+    </style>
 </head>
 
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
+    <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -61,14 +267,11 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
-<!--End of Tawk.to Script-->
-    <body>
-    <!-- Loading Screen -->
+<body>
     <div class="loading-screen">
         <div class="loading-logo">My-IPTV</div>
     </div>
 
-    <!-- Header -->
     <header id="header">
         <nav>
             <a href="#home" class="logo">My-IPTV</a>
@@ -90,7 +293,7 @@ s0.parentNode.insertBefore(s1,s0);
                         <a href="en.html" class="language-option">
                             <span class="flag">🇬🇧</span>
                             <span class="name">English</span>
-                            <a
+                        </a>
                         <a href="fr.html" class="language-option current">
                             <span class="flag">🇫🇷</span>
                             <span class="name">Français</span>
@@ -114,7 +317,6 @@ s0.parentNode.insertBefore(s1,s0);
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg"></div>
         <div class="hero-content">
@@ -127,7 +329,6 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
     </section>
 
-    <!-- Features Section -->
     <section id="features">
         <h2 class="section-title fade-in">Fonctionnalités Premium</h2>
         <div class="features-grid">
@@ -164,486 +365,172 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
     </section>
 
-        <!-- FILM SECTION--> 
-
-        <style>
-:root {
-  --card-width: 180px;
-  --gap: 20px;
-  --height: 260px;
-  --speed: 2.5s;
-  --neon-color: #ff004c;
-}
-
-.neon-carousel {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
-  background: #0a0a0a;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 0 25px var(--neon-color), inset 0 0 30px rgba(255,0,76,0.4);
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-  position: relative;
-}
-
-/* STYLE 4D pour le titre */
-.neon-title {
-  color: #fff;
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  text-align: center;
-  letter-spacing: 2px;
-  text-shadow: 
-    2px 2px 4px #000,
-    -2px -2px 4px #ff004c,
-    2px -2px 4px #00ffe5,
-    -2px 2px 4px #ffff00,
-    0 0 10px var(--neon-color),
-    0 0 20px var(--neon-color);
-}
-
-.neon-viewport {
-  overflow: hidden;
-}
-<!-- Début: Carousel IPTV Néon avec Films/Séries Populaires -->
-<style>
-:root {
-  --card-width: 180px;
-  --gap: 20px;
-  --height: 260px;
-  --speed: 2.5s;
-  --neon-color: #ff004c;
-}
-
-.neon-carousel {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
-  background: #0a0a0a;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 0 25px var(--neon-color), inset 0 0 30px rgba(255,0,76,0.4);
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-  position: relative;
-}
-
-.neon-title {
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  text-align: center;
-  text-shadow: 0 0 8px var(--neon-color), 0 0 15px var(--neon-color);
-}
-
-.neon-viewport {
-  overflow: hidden;
-}
-
-.neon-track {
-  display: flex;
-  gap: var(--gap);
-  padding-bottom: 10px;
-  transition: transform 0.5s ease;
-}
-
-.neon-card {
-  flex: 0 0 auto;
-  width: var(--card-width);
-  background: #111;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(255,0,76,0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.neon-card:hover {
-  transform: scale(1.07);
-  box-shadow: 0 0 20px var(--neon-color), 0 0 35px var(--neon-color);
-}
-
-.neon-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-}
-
-.neon-info {
-  padding: 8px;
-  color: #fff;
-  text-align: center;
-}
-
-.neon-title-movie {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-
-.neon-title-movie a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.neon-title-movie a:hover {
-  text-decoration: underline;
-  color: var(--neon-color);
-}
-
-.stars {
-  color: gold;
-  font-size: 13px;
-  margin-bottom: 4px;
-}
-
-.review {
-  font-size: 12px;
-  color: #ccc;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  border: 2px solid var(--neon-color);
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--neon-color);
-  z-index: 10;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.carousel-btn:hover {
-  background: var(--neon-color);
-  transform: scale(1.1);
-}
-
-.btn-left { left: 5px; }
-.btn-right { right: 5px; }
-
-@media (max-width: 800px) {
-  :root { --card-width: 140px; }
-  .neon-card img { height: 190px; }
-}
-
-@media (max-width: 420px) {
-  :root { --card-width: 120px; }
-  .neon-card img { height: 170px; }
-}
-</style>
-
-<div class="neon-carousel">
-  <div class="neon-title">⚡🎥🔥
-  </div>
-  <button class="carousel-btn btn-left" aria-label="Précédent">&#10094;</button>
-  <button class="carousel-btn btn-right" aria-label="Suivant">&#10095;</button>
-
-  <div class="neon-viewport">
-    <div class="neon-track" id="neon-track">
-      <!-- 1 -->
-      <div class="neon-card">
-        <img src="https://i.postimg.cc/1ggRqTbr/deadpool-wolverine.jpg" alt="Deadpool & Wolverine">
-        <div class="neon-info">
-          <div class="neon-title-movie">
-            <a href="https://www.youtube.com/watch?v=73_1biulkYk" target="_blank">Deadpool & Wolverine</a>
-          </div>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <div class="review">Humour, action et duo explosif.</div>
-        </div>
-      </div>
-      <!-- 2 -->
-      <div class="neon-card">
-        <img src="https://i.postimg.cc/6y9ZFr7x/house-of-the-dragon.jpg" alt="House of the Dragon">
-        <div class="neon-info">
-          <div class="neon-title-movie">
-            <a href="https://www.youtube.com/watch?v=DotnJ7tTA34" target="_blank">House of the Dragon</a>
-          </div>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <div class="review">Intrigues et dragons dans l'univers GOT.</div>
-        </div>
-      </div>
-      <!-- 3 -->
-      <div class="neon-card">
-        <img src="https://image.tmdb.org/t/p/w200/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg" alt="La Casa de Papel">
-        <div class="neon-info">
-          <div class="neon-title-movie">
-            <a href="https://www.youtube.com/watch?v=ZAXA1DV4dtI" target="_blank">La Casa de Papel</a>
-          </div>
-          <div class="stars">⭐⭐⭐⭐☆</div>
-          <div class="review">Le braquage du siècle, plein de suspense.</div>
-        </div>
-      </div>
-      <!-- 4 -->
-      <div class="neon-card">
-        <img src="https://image.tmdb.org/t/p/w200/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="The Last of Us">
-        <div class="neon-info">
-          <div class="neon-title-movie">
-            <a href="https://www.youtube.com/watch?v=uLtkt8BonwM" target="_blank">The Last of Us</a>
-          </div>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <div class="review">Survie et émotions fortes garanties.</div>
-        </div>
-      </div>
-      <!-- 5 -->
-      <div class="neon-card">
-        <img src="https://image.tmdb.org/t/p/w200/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg" alt="Avatar 2">
-        <div class="neon-info">
-          <div class="neon-title-movie">
-            <a href="https://www.youtube.com/watch?v=d9MyW72ELq0" target="_blank">Avatar 2</a>
-          </div>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <div class="review">Une immersion visuelle époustouflante.</div>
-        </div>
-      </div>
-      <!-- 6 -->
-      <div class="neon-card">
-        <img src="https://image.tmdb.org/t/p/w200/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg" alt="Stranger Things">
-        <div class="neon-info">
-          <div class="neon-title-movie">
-            <a href="https://www.youtube.com/watch?v=b9EkMc79ZSU" target="_blank">Stranger Things</a>
-          </div>
-          <div class="stars">⭐⭐⭐⭐☆</div>
-          <div class="review">Mystère, horreur et années 80.</div>
-        </div>
-      </div>
-      <!-- 7 -->
-      <div class="neon-card">
-        <img src="https://image.tmdb.org/t/p/w200/fiVW06jE7z9YnO4trhaMEdclSiC.jpg" alt="Fast X">
-        <div class="neon-info">
-          <div class="neon-title-movie">
-            <a href="https://www.youtube.com/watch?v=32RAq6JzY-w" target="_blank">Fast X</a>
-          </div>
-          <div class="stars">⭐⭐⭐⭐☆</div>
-          <div class="review">Vitesse, adrénaline et famille.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-const track = document.getElementById('neon-track');
-const btnLeft = document.querySelector('.btn-left');
-const btnRight = document.querySelector('.btn-right');
-const cardWidth = document.querySelector('.neon-card').offsetWidth + 20;
-
-// Clone pour défilement infini
-track.innerHTML += track.innerHTML;
-
-let scrollPos = 0;
-let autoScroll;
-
-function moveCarousel(dir = 1) {
-  scrollPos += dir * cardWidth;
-  track.style.transform = `translateX(${-scrollPos}px)`;
-
-  if (scrollPos >= track.scrollWidth / 2) scrollPos = 0;
-  if (scrollPos < 0) scrollPos = track.scrollWidth / 2 - cardWidth;
-}
-
-function startAutoScroll() {
-  autoScroll = setInterval(() => moveCarousel(1), 2500);
-}
-
-btnLeft.addEventListener('click', () => moveCarousel(-1));
-btnRight.addEventListener('click', () => moveCarousel(1));
-
-track.addEventListener('mouseenter', () => clearInterval(autoScroll));
-track.addEventListener('mouseleave', startAutoScroll);
-
-startAutoScroll();
-</script>
-<!-- Fin -->
-
-        <--Avis-->
-            <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avis Clients</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #007BFF;
-            --secondary-color: #f8f9fa;
-            --text-color: #495057;
-            --heading-color: #343a40;
-            --border-color: #e9ecef;
-            --star-color: #FFD700;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f7f6;
-            color: var(--text-color);
-            margin: 0;
-            padding: 2rem 1rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h2.main-heading {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--heading-color);
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        h2.main-heading::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary-color);
-            border-radius: 2px;
-        }
-
-        .avis-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .avis-card {
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 5px solid var(--primary-color);
-        }
-
-        .avis-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .avis-card .etoiles {
-            color: var(--star-color);
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .avis-card h4 {
-            color: var(--primary-color);
-            font-size: 1.4rem;
-            margin: 0 0 1rem 0;
-        }
-
-        .avis-card p {
-            font-style: italic;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .avis-card .signature {
-            border-top: 1px solid var(--border-color);
-            padding-top: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-        .avis-card .nom {
-            font-weight: bold;
-            color: var(--heading-color);
-        }
-        
-        @media (max-width: 768px) {
-            h2.main-heading {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h2 class="main-heading">Nos clients, nos meilleurs ambassadeurs !</h2>
-
-        <div class="avis-grid">
-
-            <div class="avis-card">
-                <div class="etoiles">★★★★★</div>
-                <h4>“La télé d'aujourd'hui, enfin !”</h4>
-                <p>“Je cherchais un service moderne et simple en France. Celui-ci a dépassé toutes mes attentes. La navigation est intuitive et j'ai accès à tous mes contenus préférés en un clic. C'est l'abonnement qu'il me fallait pour toute la famille.”</p>
-                <div class="signature">
-                    <span class="nom">Marc</span>
-                    <span class="pays">France 🇫🇷</span>
+    <div class="neon-carousel">
+        <div class="neon-title">⚡🎥🔥</div>
+        <button class="carousel-btn btn-left" aria-label="Précédent">❮</button>
+        <button class="carousel-btn btn-right" aria-label="Suivant">❯</button>
+        <div class="neon-viewport">
+            <div class="neon-track" id="neon-track">
+                <div class="neon-card">
+                    <img src="https://i.postimg.cc/1ggRqTbr/deadpool-wolverine.jpg" alt="Deadpool & Wolverine">
+                    <div class="neon-info">
+                        <div class="neon-title-movie">
+                            <a href="https://www.youtube.com/watch?v=73_1biulkYk" target="_blank">Deadpool & Wolverine</a>
+                        </div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <div class="review">Humour, action et duo explosif.</div>
+                    </div>
+                </div>
+                <div class="neon-card">
+                    <img src="https://i.postimg.cc/6y9ZFr7x/house-of-the-dragon.jpg" alt="House of the Dragon">
+                    <div class="neon-info">
+                        <div class="neon-title-movie">
+                            <a href="https://www.youtube.com/watch?v=DotnJ7tTA34" target="_blank">House of the Dragon</a>
+                        </div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <div class="review">Intrigues et dragons dans l'univers GOT.</div>
+                    </div>
+                </div>
+                <div class="neon-card">
+                    <img src="https://image.tmdb.org/t/p/w200/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg" alt="La Casa de Papel">
+                    <div class="neon-info">
+                        <div class="neon-title-movie">
+                            <a href="https://www.youtube.com/watch?v=ZAXA1DV4dtI" target="_blank">La Casa de Papel</a>
+                        </div>
+                        <div class="stars">⭐⭐⭐⭐☆</div>
+                        <div class="review">Le braquage du siècle, plein de suspense.</div>
+                    </div>
+                </div>
+                <div class="neon-card">
+                    <img src="https://image.tmdb.org/t/p/w200/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="The Last of Us">
+                    <div class="neon-info">
+                        <div class="neon-title-movie">
+                            <a href="https://www.youtube.com/watch?v=uLtkt8BonwM" target="_blank">The Last of Us</a>
+                        </div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <div class="review">Survie et émotions fortes garanties.</div>
+                    </div>
+                </div>
+                <div class="neon-card">
+                    <img src="https://image.tmdb.org/t/p/w200/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg" alt="Avatar 2">
+                    <div class="neon-info">
+                        <div class="neon-title-movie">
+                            <a href="https://www.youtube.com/watch?v=d9MyW72ELq0" target="_blank">Avatar 2</a>
+                        </div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <div class="review">Une immersion visuelle époustouflante.</div>
+                    </div>
+                </div>
+                <div class="neon-card">
+                    <img src="https://image.tmdb.org/t/p/w200/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg" alt="Stranger Things">
+                    <div class="neon-info">
+                        <div class="neon-title-movie">
+                            <a href="https://www.youtube.com/watch?v=b9EkMc79ZSU" target="_blank">Stranger Things</a>
+                        </div>
+                        <div class="stars">⭐⭐⭐⭐☆</div>
+                        <div class="review">Mystère, horreur et années 80.</div>
+                    </div>
+                </div>
+                <div class="neon-card">
+                    <img src="https://image.tmdb.org/t/p/w200/fiVW06jE7z9YnO4trhaMEdclSiC.jpg" alt="Fast X">
+                    <div class="neon-info">
+                        <div class="neon-title-movie">
+                            <a href="https://www.youtube.com/watch?v=32RAq6JzY-w" target="_blank">Fast X</a>
+                        </div>
+                        <div class="stars">⭐⭐⭐⭐☆</div>
+                        <div class="review">Vitesse, adrénaline et famille.</div>
+                    </div>
                 </div>
             </div>
-
-            <div class="avis-card">
-                <div class="etoiles">★★★★★</div>
-                <h4>“Une offre qui nous sort de l'ordinaire”</h4>
-                <p>“Au Canada, l'offre de chaînes est souvent la même. Grâce à cet abonnement, j'ai l'impression de voyager tous les soirs ! Le choix des chaînes est incroyable et la qualité de l'image est à couper le souffle. C'est une vraie bouffée d'air frais.”</p>
-                <div class="signature">
-                    <span class="nom">Sophie</span>
-                    <span class="pays">Canada 🇨🇦</span>
-                </div>
-            </div>
-
-            <div class="avis-card">
-                <div class="etoiles">★★★★★</div>
-                <h4>“¡Simplemente perfecto!”</h4>
-                <p>“Desde España, buscaba un servicio que fuera fácil de usar y con una gran variedad. Me sorprendió la fluidez de la interfaz y la estabilidad. Poder ver mis series y los deportes en la mejor calidad es un lujo. Lo recomiendo sin dudarlo.”</p>
-                <div class="signature">
-                    <span class="nom">Carlos</span>
-                    <span class="pays">Espagne 🇪🇸</span>
-                </div>
-            </div>
-
-            <div class="avis-card">
-                <div class="etoiles">★★★★★</div>
-                <h4>“Enfin une solution sans tracas”</h4>
-                <p>“En Belgique, j'étais fatigué des problèmes de connexion avec mes anciens abonnements. Ce service est d'une fiabilité exemplaire. Le streaming est instantané et je n'ai plus à me soucier des coupures. Un vrai bonheur pour mes soirées cinéma.”</p>
-                <div class="signature">
-                    <span class="nom">François</span>
-                    <span class="pays">Belgique 🇧🇪</span>
-                </div>
-            </div>
-
-            <div class="avis-card">
-                <div class="etoiles">★★★★★</div>
-                <h4>“Un'esperienza televisiva completa”</h4>
-                <p>“Dall'Italia, ho scoperto questo abbonamento e ne sono rimasto entusiasta. La scelta di canali e di film è vastissima. L'assistenza clienti è veloce e professionale. Non potrei essere più soddisfatto, ha superé toutes mes attentes.”</p>
-                <div class="signature">
-                    <span class="nom">Giulia</span>
-                    <span class="pays">Italie 🇮🇹</span>
-                </div>
-            </div>
-
         </div>
     </div>
+    
+    <script>
+    const track = document.getElementById('neon-track');
+    const btnLeft = document.querySelector('.btn-left');
+    const btnRight = document.querySelector('.btn-right');
+    const cardWidth = document.querySelector('.neon-card').offsetWidth + 20;
 
-</body>
-</html>
+    // Clone pour défilement infini
+    track.innerHTML += track.innerHTML;
 
-                    
-    <!-- Pricing Section -->
+    let scrollPos = 0;
+    let autoScroll;
+
+    function moveCarousel(dir = 1) {
+        scrollPos += dir * cardWidth;
+        track.style.transform = `translateX(${-scrollPos}px)`;
+
+        if (scrollPos >= track.scrollWidth / 2) scrollPos = 0;
+        if (scrollPos < 0) scrollPos = track.scrollWidth / 2 - cardWidth;
+    }
+
+    function startAutoScroll() {
+        autoScroll = setInterval(() => moveCarousel(1), 2500);
+    }
+
+    btnLeft.addEventListener('click', () => moveCarousel(-1));
+    btnRight.addEventListener('click', () => moveCarousel(1));
+
+    track.addEventListener('mouseenter', () => clearInterval(autoScroll));
+    track.addEventListener('mouseleave', startAutoScroll);
+
+    startAutoScroll();
+    </script>
+    
+    <section class="avis-section">
+        <div class="container">
+            <h2 class="main-heading">Nos clients, nos meilleurs ambassadeurs !</h2>
+            <div class="avis-grid">
+                <div class="avis-card">
+                    <div class="etoiles">★★★★★</div>
+                    <h4>“La télé d'aujourd'hui, enfin !”</h4>
+                    <p>“Je cherchais un service moderne et simple en France. Celui-ci a dépassé toutes mes attentes. La navigation est intuitive et j'ai accès à tous mes contenus préférés en un clic. C'est l'abonnement qu'il me fallait pour toute la famille.”</p>
+                    <div class="signature">
+                        <span class="nom">Marc</span>
+                        <span class="pays">France 🇫🇷</span>
+                    </div>
+                </div>
+                <div class="avis-card">
+                    <div class="etoiles">★★★★★</div>
+                    <h4>“Une offre qui nous sort de l'ordinaire”</h4>
+                    <p>“Au Canada, l'offre de chaînes est souvent la même. Grâce à cet abonnement, j'ai l'impression de voyager tous les soirs ! Le choix des chaînes est incroyable et la qualité de l'image est à couper le souffle. C'est une vraie bouffée d'air frais.”</p>
+                    <div class="signature">
+                        <span class="nom">Sophie</span>
+                        <span class="pays">Canada 🇨🇦</span>
+                    </div>
+                </div>
+                <div class="avis-card">
+                    <div class="etoiles">★★★★★</div>
+                    <h4>“¡Simplemente perfecto!”</h4>
+                    <p>“Desde España, buscaba un servicio que fuera fácil de usar y con una gran variedad. Me sorprendió la fluidez de la interfaz y la stabilité. Pouvoir voir mes séries et les sports en la meilleure qualité est un luxe. Lo recomiendo sin dudarlo.”</p>
+                    <div class="signature">
+                        <span class="nom">Carlos</span>
+                        <span class="pays">Espagne 🇪🇸</span>
+                    </div>
+                </div>
+                <div class="avis-card">
+                    <div class="etoiles">★★★★★</div>
+                    <h4>“Enfin une solution sans tracas”</h4>
+                    <p>“En Belgique, j'étais fatigué des problèmes de connexion avec mes anciens abonnements. Ce service est d'une fiabilité exemplaire. Le streaming est instantané et je n'ai plus à me soucier des coupures. Un vrai bonheur pour mes soirées cinéma.”</p>
+                    <div class="signature">
+                        <span class="nom">François</span>
+                        <span class="pays">Belgique 🇧🇪</span>
+                    </div>
+                </div>
+                <div class="avis-card">
+                    <div class="etoiles">★★★★★</div>
+                    <h4>“Un'esperienza televisiva completa”</h4>
+                    <p>“Dall'Italia, ho scoperto questo abbonamento e ne sono rimasto entusiasta. La scelta di canali e di film è vastissima. L'assistenza clienti è veloce e professionale. Non potrei être plus satisfait, a dépassé toutes mes attentes.”</p>
+                    <div class="signature">
+                        <span class="nom">Giulia</span>
+                        <span class="pays">Italie 🇮🇹</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                        
     <section id="pricing">
         <h2 class="section-title fade-in">Nos Offres</h2>
         <div class="pricing-container">
@@ -680,7 +567,6 @@ startAutoScroll();
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section id="faq">
         <h2 class="section-title fade-in">Questions Fréquentes</h2>
         <div class="faq-container">
@@ -746,51 +632,50 @@ startAutoScroll();
         </div>
     </section>
     <section id="activation" style="background: radial-gradient(circle, #0a0a0a 0%, #000 100%); padding: 50px 20px; font-family: 'Segoe UI', sans-serif; color: #fff;">
-  <div style="max-width: 800px; margin: auto; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 20px; padding: 40px; box-shadow: 0 0 25px rgba(0,255,200,0.2);">
-    <h2 style="color: #00ffe1; text-align: center; font-size: 30px; margin-bottom: 30px;">
-      🚀 Activation Express IPTV
-    </h2>
-    <p style="text-align: center; font-size: 18px;">Entrez vos infos pour une installation rapide par notre équipe.</p>
+        <div style="max-width: 800px; margin: auto; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 20px; padding: 40px; box-shadow: 0 0 25px rgba(0,255,200,0.2);">
+            <h2 style="color: #00ffe1; text-align: center; font-size: 30px; margin-bottom: 30px;">
+                🚀 Activation Express IPTV
+            </h2>
+            <p style="text-align: center; font-size: 18px;">Entrez vos infos pour une installation rapide par notre équipe.</p>
 
-    <form onsubmit="sendToWhatsApp(); return false;" style="margin-top: 30px;">
-      <label for="app" style="color:#ccc;">📱 Application utilisée :</label><br>
-      <select id="app" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 10px; border: none; background: #111; color: #00ffe1;">
-        <option value="">-- Choisissez --</option>
-        <option value="IBO Player">IBO Player</option>
-        <option value="B0B Player">B0B Player</option>
-      </select>
+            <form onsubmit="sendToWhatsApp(); return false;" style="margin-top: 30px;">
+                <label for="app" style="color:#ccc;">📱 Application utilisée :</label><br>
+                <select id="app" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 10px; border: none; background: #111; color: #00ffe1;">
+                    <option value="">-- Choisissez --</option>
+                    <option value="IBO Player">IBO Player</option>
+                    <option value="B0B Player">B0B Player</option>
+                </select>
 
-      <label for="mac" style="color:#ccc;">🆔 Adresse MAC :</label><br>
-      <input type="text" id="mac" placeholder="Ex: A1:B2:C3:D4:E5:F6" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 10px; border: none; background: #111; color: #fff;">
+                <label for="mac" style="color:#ccc;">🆔 Adresse MAC :</label><br>
+                <input type="text" id="mac" placeholder="Ex: A1:B2:C3:D4:E5:F6" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 10px; border: none; background: #111; color: #fff;">
 
-      <label for="key" style="color:#ccc;">🔑 Device Key (clé de l’appareil) :</label><br>
-      <input type="text" id="key" placeholder="Ex: ABC1234567" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 10px; border: none; background: #111; color: #fff;">
+                <label for="key" style="color:#ccc;">🔑 Device Key (clé de l’appareil) :</label><br>
+                <input type="text" id="key" placeholder="Ex: ABC1234567" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 10px; border: none; background: #111; color: #fff;">
 
-      <button type="submit" style="width: 100%; background: #00ffe1; color: #000; padding: 15px; border: none; border-radius: 15px; font-size: 18px; font-weight: bold; box-shadow: 0 0 10px #00ffe1;">
-        🚀 Envoyer et activer par WhatsApp
-      </button>
-    </form>
+                <button type="submit" style="width: 100%; background: #00ffe1; color: #000; padding: 15px; border: none; border-radius: 15px; font-size: 18px; font-weight: bold; box-shadow: 0 0 10px #00ffe1;">
+                    🚀 Envoyer et activer par WhatsApp
+                </button>
+            </form>
 
-    <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #999;">
-      Nous vous répondrons sous 5 minutes.
-    </p>
-  </div>
-</section>
+            <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #999;">
+                Nous vous répondrons sous 5 minutes.
+            </p>
+        </div>
+    </section>
 
-<script>
-function sendToWhatsApp() {
-  const app = document.getElementById("app").value;
-  const mac = document.getElementById("mac").value;
-  const key = document.getElementById("key").value;
+    <script>
+    function sendToWhatsApp() {
+        const app = document.getElementById("app").value;
+        const mac = document.getElementById("mac").value;
+        const key = document.getElementById("key").value;
 
-  const message = `🔥 Nouvelle demande IPTV :%0A📱 Application: ${app}%0A🆔 MAC: ${mac}%0A🔑 Device Key: ${key}`;
-  const phone = "212694843943";
-  const url = `https://wa.me/${phone}?text=${message}`;
-  window.open(url, '_blank');
-}
-</script>
+        const message = `🔥 Nouvelle demande IPTV :%0A📱 Application: ${app}%0A🆔 MAC: ${mac}%0A🔑 Device Key: ${key}`;
+        const phone = "212694843943";
+        const url = `https://wa.me/${phone}?text=${message}`;
+        window.open(url, '_blank');
+    }
+    </script>
 
-    <!-- Contact Section -->
     <section id="contact">
         <h2 class="section-title fade-in">Contactez-nous</h2>
         <div class="contact-form fade-in">
@@ -842,30 +727,25 @@ function sendToWhatsApp() {
         </div>
     </section>
 
-    <!-- Payment Methods Section -->
     <section id="paiement" style="padding: 30px; background-color: #f8f8f8; border-top: 2px solid #ccc; border-radius: 10px; margin-top: 40px;">
         <h2 style="text-align: center; color: #222;">Moyens de Paiement Disponibles</h2>
 
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
-            <!-- CIH Bank -->
             <div style="text-align: center; width: 200px; color: #333;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Cih-bank.png" alt="CIH Bank" width="200" height="200" style="object-fit: contain;">
                 <p><strong>CIH Bank</strong><br>Virement bancaire<br><em>Contactez-nous pour RIB</em></p>
             </div>
 
-            <!-- PayPal -->
             <div style="text-align: center; width: 200px; color: #333;">
                 <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" width="70" height="70" style="object-fit: contain;">
                 <p><strong>PayPal</strong><br>Paiement sécurisé</p>
             </div>
 
-            <!-- Revolut -->
             <div style="text-align: center; width: 200px; color: #333;">
                 <img src="https://1000logos.net/wp-content/uploads/2022/08/Revolut-Logo.png" alt="Revolut" width="110" height="110" style="object-fit: contain;">
                 <p><strong>Revolut</strong><br>Utilisateur : <br><em>@votrenom</em></p>
             </div>
 
-            <!-- CashPlus -->
             <div style="text-align: center; width: 200px; color: #333;">
                 <img src="https://play-lh.googleusercontent.com/xQTM2q40kKDcAfhYiJ2y6Criw_hAS_pTebjRRZbQeRc7l3ZxRl3VU4dOtPMGZ2a7Dg" alt="CashPlus" width="70" height="70" style="object-fit: contain;">
                 <p><strong>CashPlus</strong><br>Disponible via agence<br><em>Code de retrait sur demande</em></p>
@@ -875,7 +755,6 @@ function sendToWhatsApp() {
         <p style="text-align: center; color: green; font-weight: bold; margin-top: 20px;">Tous nos paiements sont 100% sécurisés ✅</p>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-links">
@@ -885,18 +764,16 @@ function sendToWhatsApp() {
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </div>
-            <p>&copy; 2025 My-IPTV. Tous droits réservés. Service IPTV premium.</p>
+            <p>© 2025 My-IPTV. Tous droits réservés. Service IPTV premium.</p>
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
     <a href="https://wa.me/212694843943?text=👋%20Bonjour%2C%20je%20suis%20intéressé%20par%20votre%20service%20IPTV%20📺" class="whatsapp-float" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.106"/>
         </svg>
     </a>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
-                        </html>
+</html>
