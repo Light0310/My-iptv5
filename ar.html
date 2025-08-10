@@ -206,7 +206,262 @@
         </div>
     </section>
 
-    < !-- FILM -->
+    <!-- FILM -->
+<!-- Début: Carousel IPTV Néon avec Films/Séries Populaires -->
+<style>
+:root {
+  --card-width: 180px;
+  --gap: 20px;
+  --height: 260px;
+  --speed: 2.5s;
+  --neon-color: #ff004c;
+}
+
+.neon-carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #0a0a0a;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 25px var(--neon-color), inset 0 0 30px rgba(255,0,76,0.4);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.neon-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 0 0 8px var(--neon-color), 0 0 15px var(--neon-color);
+}
+
+.neon-viewport {
+  overflow: hidden;
+}
+
+.neon-track {
+  display: flex;
+  gap: var(--gap);
+  padding-bottom: 10px;
+  transition: transform 0.5s ease;
+}
+
+.neon-card {
+  flex: 0 0 auto;
+  width: var(--card-width);
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255,0,76,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.neon-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px var(--neon-color), 0 0 35px var(--neon-color);
+}
+
+.neon-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.neon-info {
+  padding: 8px;
+  color: #fff;
+  text-align: center;
+}
+
+.neon-title-movie {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.neon-title-movie a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.neon-title-movie a:hover {
+  text-decoration: underline;
+  color: var(--neon-color);
+}
+
+.stars {
+  color: gold;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.review {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: 2px solid var(--neon-color);
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--neon-color);
+  z-index: 10;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.carousel-btn:hover {
+  background: var(--neon-color);
+  transform: scale(1.1);
+}
+
+.btn-left { left: 5px; }
+.btn-right { right: 5px; }
+
+@media (max-width: 800px) {
+  :root { --card-width: 140px; }
+  .neon-card img { height: 190px; }
+}
+
+@media (max-width: 420px) {
+  :root { --card-width: 120px; }
+  .neon-card img { height: 170px; }
+}
+</style>
+
+<div class="neon-carousel">
+  <div class="neon-title">🔥🎥⚡
+  </div>
+  <button class="carousel-btn btn-left" aria-label="Précédent">&#10094;</button>
+  <button class="carousel-btn btn-right" aria-label="Suivant">&#10095;</button>
+
+  <div class="neon-viewport">
+    <div class="neon-track" id="neon-track">
+      <!-- 1 -->
+      <div class="neon-card">
+        <img src="https://i.postimg.cc/1ggRqTbr/deadpool-wolverine.jpg" alt="Deadpool & Wolverine">
+        <div class="neon-info">
+          <div class="neon-title-movie">
+            <a href="https://www.youtube.com/watch?v=73_1biulkYk" target="_blank">Deadpool & Wolverine</a>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <div class="review">Humour, action et duo explosif.</div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="neon-card">
+        <img src="https://i.postimg.cc/6y9ZFr7x/house-of-the-dragon.jpg" alt="House of the Dragon">
+        <div class="neon-info">
+          <div class="neon-title-movie">
+            <a href="https://www.youtube.com/watch?v=DotnJ7tTA34" target="_blank">House of the Dragon</a>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <div class="review">Intrigues et dragons dans l'univers GOT.</div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="neon-card">
+        <img src="https://image.tmdb.org/t/p/w200/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg" alt="La Casa de Papel">
+        <div class="neon-info">
+          <div class="neon-title-movie">
+            <a href="https://www.youtube.com/watch?v=ZAXA1DV4dtI" target="_blank">La Casa de Papel</a>
+          </div>
+          <div class="stars">⭐⭐⭐⭐☆</div>
+          <div class="review">Le braquage du siècle, plein de suspense.</div>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="neon-card">
+        <img src="https://image.tmdb.org/t/p/w200/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="The Last of Us">
+        <div class="neon-info">
+          <div class="neon-title-movie">
+            <a href="https://www.youtube.com/watch?v=uLtkt8BonwM" target="_blank">The Last of Us</a>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <div class="review">Survie et émotions fortes garanties.</div>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="neon-card">
+        <img src="https://image.tmdb.org/t/p/w200/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg" alt="Avatar 2">
+        <div class="neon-info">
+          <div class="neon-title-movie">
+            <a href="https://www.youtube.com/watch?v=d9MyW72ELq0" target="_blank">Avatar 2</a>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <div class="review">Une immersion visuelle époustouflante.</div>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="neon-card">
+        <img src="https://image.tmdb.org/t/p/w200/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg" alt="Stranger Things">
+        <div class="neon-info">
+          <div class="neon-title-movie">
+            <a href="https://www.youtube.com/watch?v=b9EkMc79ZSU" target="_blank">Stranger Things</a>
+          </div>
+          <div class="stars">⭐⭐⭐⭐☆</div>
+          <div class="review">Mystère, horreur et années 80.</div>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="neon-card">
+        <img src="https://image.tmdb.org/t/p/w200/fiVW06jE7z9YnO4trhaMEdclSiC.jpg" alt="Fast X">
+        <div class="neon-info">
+          <div class="neon-title-movie">
+            <a href="https://www.youtube.com/watch?v=32RAq6JzY-w" target="_blank">Fast X</a>
+          </div>
+          <div class="stars">⭐⭐⭐⭐☆</div>
+          <div class="review">Vitesse, adrénaline et famille.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const track = document.getElementById('neon-track');
+const btnLeft = document.querySelector('.btn-left');
+const btnRight = document.querySelector('.btn-right');
+const cardWidth = document.querySelector('.neon-card').offsetWidth + 20;
+
+// Clone pour défilement infini
+track.innerHTML += track.innerHTML;
+
+let scrollPos = 0;
+let autoScroll;
+
+function moveCarousel(dir = 1) {
+  scrollPos += dir * cardWidth;
+  track.style.transform = `translateX(${-scrollPos}px)`;
+
+  if (scrollPos >= track.scrollWidth / 2) scrollPos = 0;
+  if (scrollPos < 0) scrollPos = track.scrollWidth / 2 - cardWidth;
+}
+
+function startAutoScroll() {
+  autoScroll = setInterval(() => moveCarousel(1), 2500);
+}
+
+btnLeft.addEventListener('click', () => moveCarousel(-1));
+btnRight.addEventListener('click', () => moveCarousel(1));
+
+track.addEventListener('mouseenter', () => clearInterval(autoScroll));
+track.addEventListener('mouseleave', startAutoScroll);
+
+startAutoScroll();
+</script>
+<!-- Fin -->
+    
 
     <style>
 :root {
