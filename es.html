@@ -123,6 +123,167 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
         </div>
     </section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneos de Fútbol 2025</title>
+    <style>
+        /* Variables CSS para un tema moderno y oscuro */
+        :root {
+            --background-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-color: #bb86fc;
+            --text-color: #e0e0e0;
+            --secondary-text-color: #a0a0a0;
+            --shadow-color: rgba(0, 0, 0, 0.5);
+            --border-radius: 8px;
+            --transition-speed: 0.3s;
+        }
+
+        /* Estilos base y de accesibilidad */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
+        }
+
+        /* Encabezado de la página */
+        header {
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin: 0;
+        }
+
+        /* Sección principal para las tarjetas */
+        main {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        /* Estilos de las tarjetas individuales */
+        .card {
+            background-color: var(--surface-color);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px var(--shadow-color);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            position: relative;
+        }
+
+        /* Efecto al pasar el cursor y al enfocar */
+        .card:hover, .card:focus-within {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 8px 30px var(--shadow-color);
+            outline: none;
+        }
+
+        .card:focus-within {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 4px;
+        }
+
+        /* Contenido de la tarjeta */
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .flag-icon {
+            font-size: 2.5rem;
+            margin-right: 1rem;
+            filter: grayscale(20%);
+        }
+
+        h2.tournament-name {
+            margin: 0;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        .card-body p {
+            margin: 0 0 0.5rem 0;
+            color: var(--secondary-text-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>⚽ Principales torneos de fútbol de 2025 🏆</h1>
+    </header>
+
+    <main class="container">
+        <article class="card" aria-labelledby="tournament1-name">
+            <header class="card-header">
+                <span class="flag-icon" role="img" aria-label="Bandera de Marruecos">🇲🇦</span>
+                <h2 id="tournament1-name" class="tournament-name">Copa Africana de Naciones</h2>
+            </header>
+            <div class="card-body">
+                <p><strong>Fechas:</strong> Julio - Agosto de 2025</p>
+                <p><strong>Lugar:</strong> Marruecos</p>
+            </div>
+        </article>
+
+        <article class="card" aria-labelledby="tournament2-name">
+            <header class="card-header">
+                <span class="flag-icon" role="img" aria-label="Bandera de Chile">🇨🇱</span>
+                <h2 id="tournament2-name" class="tournament-name">Copa Mundial Sub-20 de la FIFA</h2>
+            </header>
+            <div class="card-body">
+                <p><strong>Fechas:</strong> Junio - Julio de 2025</p>
+                <p><strong>Lugar:</strong> Chile</p>
+            </div>
+        </article>
+
+        <article class="card" aria-labelledby="tournament3-name">
+            <header class="card-header">
+                <span class="flag-icon" role="img" aria-label="Bandera de Suiza">🇨🇭</span>
+                <h2 id="tournament3-name" class="tournament-name">Eurocopa Femenina de la UEFA</h2>
+            </header>
+            <div class="card-body">
+                <p><strong>Fechas:</strong> Julio de 2025</p>
+                <p><strong>Lugar:</strong> Suiza</p>
+            </div>
+        </article>
+
+        <article class="card" aria-labelledby="tournament4-name">
+            <header class="card-header">
+                <span class="flag-icon" role="img" aria-label="Bandera de Estados Unidos">🇺🇸</span>
+                <h2 id="tournament4-name" class="tournament-name">Copa Mundial de Clubes de la FIFA</h2>
+            </header>
+            <div class="card-body">
+                <p><strong>Fechas:</strong> Junio - Julio de 2025</p>
+                <p><strong>Lugar:</strong> Estados Unidos</p>
+            </div>
+        </article>
+    </main>
+
+</body>
+</html>
 
     <!-- Features Section -->
     <section id="features">
