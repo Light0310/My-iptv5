@@ -863,3 +863,26 @@ footer {
 }
 .wa-minimal a .wa-ico { color:#fff; }
 .wa-minimal a:hover { opacity:.92; transform:translateY(-2px); transition:.18s; }
+
+.wa-glass{ margin-top:18px; text-align:center; }
+.wa-glass a{
+  display:inline-flex;
+  gap:12px;
+  padding:12px 34px;
+  border-radius:36px;
+  color:#fff;
+  background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border:1px solid rgba(255,255,255,0.12);
+  box-shadow:0 10px 30px rgba(6,120,180,0.08);
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+.wa-glass a:hover{
+  transform:translateY(-5px);
+  background:linear-gradient(90deg,#00c777,#00a6f0);
+}
+.wa-ico{
+  width:22px;
+  height:22px;
+  color:white;
+}
