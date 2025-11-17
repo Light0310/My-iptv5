@@ -724,11 +724,15 @@ s0.parentNode.insertBefore(s1,s0);
     <section id="contact">
         <h2 class="section-title fade-in">Contactez-nous</h2>
         <div class="contact-form fade-in">
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Nom complet *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
+           <form id="contactForm" action="https://formspree.io/f/xrbrjqzl" method="POST">
+  <input type="text" name="name" required placeholder="Nom complet">
+  <select name="service" required> ... </select>
+  <textarea name="message" placeholder="Message"></textarea>
+  <select name="contact_method" required> ... </select>
+  <input type="text" name="_gotcha" style="display:none"> <!-- anti-spam -->
+  <button type="submit">Envoyer la demande</button>
+</form>
+
 
                 <div class="form-group">
                     <label for="service">Service souhaité *</label>
